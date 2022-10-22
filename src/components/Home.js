@@ -1,9 +1,26 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
+import MetaData from './layout/MetaData'
+import { useDispatch, useSelector } from "react-redux";
+import { getProducts } from "../actions/productActions";
+import axios from 'axios';
 
 export const Home = () => {
+
+  const dispatch = useDispatch();
+  const { loading, products, error, productsCount } = useSelector(state => state.products)
+
+  useEffect(() => {
+    // const data  = axios.get('/api/v1/products');
+
+    dispatch(getProducts());
+
+
+  }, [dispatch])
+ 
   return (
     <Fragment>
-      <main class="main__content_wrapper">
+        <MetaData title={'Buy Best Products'}/>
+      <main className="main__content_wrapper pt-5">
         <section className="breadcrumb__section breadcrumb__bg">
           <div className="container">
             <div className="row row-cols-1">
@@ -27,7 +44,7 @@ export const Home = () => {
             </div>
           </div>
         </section>
-        <section className="shop__section section--padding pt-2">
+        <section className="shop__section section--padding pt-1">
           <div className="container-fluid">
             <div className="row">
               <div className="col-xl-3 col-lg-4">
@@ -80,7 +97,7 @@ export const Home = () => {
                         <div className="price__filter--group">
                           <label
                             className="price__filter--label"
-                            for="Filter-Price-GTE2"
+                            htmlFor="Filter-Price-GTE2"
                           >
                             From
                           </label>
@@ -104,7 +121,7 @@ export const Home = () => {
                         <div className="price__filter--group">
                           <label
                             className="price__filter--label"
-                            for="Filter-Price-LTE2"
+                            htmlFor="Filter-Price-LTE2"
                           >
                             To
                           </label>
@@ -327,9 +344,9 @@ export const Home = () => {
                                           d="M352.92 80C288 80 256 144 256 144s-32-64-96.92-64c-52.76 0-94.54 44.14-95.08 96.81-1.1 109.33 86.73 187.08 183 252.42a16 16 0 0018 0c96.26-65.34 184.09-143.09 183-252.42-.54-52.67-42.32-96.81-95.08-96.81z"
                                           fill="none"
                                           stroke="currentColor"
-                                          stroke-linecap="round"
-                                          stroke-linejoin="round"
-                                          stroke-width="32"
+                                          strokeLinecap="round"
+                                          strokeLinejoin="round"
+                                          strokeWidth="32"
                                         ></path>
                                       </svg>
                                       <span className="visually-hidden">
@@ -341,7 +358,7 @@ export const Home = () => {
                                     <a
                                       className="product__items--action__btn"
                                       data-open="modal1"
-                                      href="javascript:void(0)"
+                                      href="#"
                                     >
                                       <svg
                                         className="product__items--action__btn--svg"
@@ -354,9 +371,9 @@ export const Home = () => {
                                           d="M255.66 112c-77.94 0-157.89 45.11-220.83 135.33a16 16 0 00-.27 17.77C82.92 340.8 161.8 400 255.66 400c92.84 0 173.34-59.38 221.79-135.25a16.14 16.14 0 000-17.47C428.89 172.28 347.8 112 255.66 112z"
                                           fill="none"
                                           stroke="currentColor"
-                                          stroke-linecap="round"
-                                          stroke-linejoin="round"
-                                          stroke-width="32"
+                                          strokeLinecap="round"
+                                          strokeLinejoin="round"
+                                          strokeWidth="32"
                                         />
                                         <circle
                                           cx="256"
@@ -364,8 +381,8 @@ export const Home = () => {
                                           r="80"
                                           fill="none"
                                           stroke="currentColor"
-                                          stroke-miterlimit="10"
-                                          stroke-width="32"
+                                          strokeMiterlimit="10"
+                                          strokeWidth="32"
                                         />
                                       </svg>
                                       <span className="visually-hidden">
@@ -398,9 +415,9 @@ export const Home = () => {
                               <path
                                 fill="none"
                                 stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="48"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="48"
                                 d="M244 400L100 256l144-144M120 256h292"
                               />
                             </svg>
@@ -443,9 +460,9 @@ export const Home = () => {
                               <path
                                 fill="none"
                                 stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="48"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="48"
                                 d="M268 112l144 144-144 144M392 256H100"
                               />
                             </svg>
