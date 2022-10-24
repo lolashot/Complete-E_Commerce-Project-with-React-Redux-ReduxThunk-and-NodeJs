@@ -1,0 +1,72 @@
+[
+    {
+        "name": "USB DRIVES",
+        "price": "40.0",
+        "description": "Please enter product description",
+        "ratings": 5,
+        "images": [
+            {
+                "public_id": "products/tzfsnrli3szrdnb4jgge",
+                "url": "https://res.cloudinary.com/shopit/image/upload/v1606231282/products/tzfsnrli3szrdnb4jgge.jpg"
+            }
+        ],
+        "category": "Electronics",
+        "seller": "Ebay",
+        "stock": 50,
+        "numOfReviews": 32,
+        "reviews": []
+    
+    },
+    {
+        "name": "USB DRIVE 2",
+        "price": "2.0",
+        "description": "Please enter product description",
+        "ratings": 4.5,
+        "images": [
+            {
+                "public_id": "products/tzfsnrli3szrdnb4jgge",
+                "url": "https://res.cloudinary.com/shopit/image/upload/v1606231282/products/tzfsnrli3szrdnb4jgge.jpg"
+            }
+        ],
+        "category": "Cameras",
+        "seller": "Ebay",
+        "stock": 50,
+        "numOfReviews": 32,
+        "reviews": []
+    
+    },
+    {
+        "name": "USB DRIVE 3",
+        "price": "20.0",
+        "description": "Please enter product description",
+        "ratings": 4.5,
+        "images": [
+            {
+                "public_id": "products/tzfsnrli3szrdnb4jgge",
+                "url": "https://res.cloudinary.com/shopit/image/upload/v1606231282/products/tzfsnrli3szrdnb4jgge.jpg"
+            }
+        ],
+        "category": "Laptops",
+        "seller": "Ebay",
+        "stock": 50,
+        "numOfReviews": 32,
+        "reviews": []    
+    },
+    {
+        "name": "Sure Leather Shoe",
+        "price": "120.0",
+        "description": "Please Please enter product description Please enter product description enter product description",
+        "ratings": 4.5,
+        "images": [
+            {
+                "public_id": "products/tzfsnrli3szrdnb4jgge",
+                "url": "https://res.cloudinary.com/shopit/image/upload/v1606231282/products/tzfsnrli3szrdnb4jgge.jpg"
+            }
+        ],
+        "category": "Sports",
+        "seller": "Ebay",
+        "stock": 50,
+        "numOfReviews": 32,
+        "reviews": []    
+    }
+]
