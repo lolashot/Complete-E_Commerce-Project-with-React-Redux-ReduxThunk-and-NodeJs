@@ -284,6 +284,7 @@ export const Home = () => {
                                       </svg>
                                     </span>
                                   </li>
+                                  <li>({product.numOfReviews} Reviews)</li>
                                 </ul>
                                 <ul className="product__items--action d-flex">
                                   <li className="product__items--action__list">
