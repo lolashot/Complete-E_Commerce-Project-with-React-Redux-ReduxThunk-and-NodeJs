@@ -10,12 +10,9 @@ export const Home = () => {
   const { loading, products, error, productsCount } = useSelector(state => state.products)
 
   useEffect(() => {
-    // const data  = axios.get('/api/v1/products');
-
-    dispatch(getProducts());
-
-
-  }, [dispatch])
+    var myproducts = dispatch(getProducts());
+    console.log ('products', products)
+}, [dispatch])
  
   return (
     <Fragment>
@@ -156,7 +153,9 @@ export const Home = () => {
                     <div id="product_grid" className="tab_pane active show">
                       <div className="product__section--inner product__grid--inner">
                         <div className="row row-cols-xl-4 row-cols-lg-3 row-cols-md-3 row-cols-2 mb--n30">
-                          <div className="col mb-30">
+                          {products && products.map(product => (
+                            
+                            <div key={product._id} className="col mb-30">
                             <div className="product__items ">
                               <div className="product__items--thumbnail">
                                 <a
@@ -182,15 +181,15 @@ export const Home = () => {
                               </div>
                               <div className="product__items--content">
                                 <span className="product__items--content__subtitle">
-                                  Jacket, Women
+                                  {product.name}
                                 </span>
                                 <h3 className="product__items--content__title h4">
                                   <a href="product-details.html">
-                                    Oversize Cotton Dress
+                                    {product.description}
                                   </a>
                                 </h3>
                                 <div className="product__items--price">
-                                  <span className="current__price">$110</span>
+                                  <span className="current__price">{product.price}</span>
                                   <span className="price__divided"></span>
                                   <span className="old__price">$78</span>
                                 </div>
@@ -394,6 +393,9 @@ export const Home = () => {
                               </div>
                             </div>
                           </div>
+
+                          ))}
+                          
                         </div>
                       </div>
                     </div>
