@@ -1,7 +1,7 @@
 {
-  "name": "topklazzic",
+  "name": "lolashop",
   "version": "1.0.0",
-  "description": "mern ecommerce site for topklazzic",
+  "description": "mern ecommerce site for lolashops",
   "main": "server.js",
   "scripts": {
     "start": "node backend/server.js",
@@ -14,12 +14,12 @@
     "type": "git",
     "url": "git+https://github.com/fmshot2/full-ecommerce-project-with-node-js.git"
   },
-  "author": "lola shotola",
+  "author": "femi shotola",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lolashot/topklazzic/issues"
+    "url": "https://github.com/fmshot2/full-ecommerce-project-with-node-js/issues"
   },
-  "homepage": "https://github.com/lolashot/topklazzic#readme",
+  "homepage": "https://github.com/fmshot2/full-ecommerce-project-with-node-js#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.2",
