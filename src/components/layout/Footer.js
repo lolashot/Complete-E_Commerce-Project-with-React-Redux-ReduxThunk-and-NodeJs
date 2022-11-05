@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { Fragment} from "react";
 const Footer = () => {
   return (
-    <fragment>
+    <Fragment>
 
       <footer className="footer__section bg__black">
         <div className="container-fluid">
@@ -80,7 +80,7 @@ const Footer = () => {
             </div>
         </div>
     </footer>
-    </fragment>
+    </Fragment>
   )
 }
 
