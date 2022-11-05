@@ -52,16 +52,16 @@ exports.getProducts = catchAsyncErrors(async (req, res, next) => {
 
     console.log('products', products);
 
-     setTimeout(() => {
-     }, 2000);
-         res.status(200).json({
+    // setTimeout(() => {
+    res.status(200).json({
         success: true,
         // count:  products.length,
         productsCount,
         resPerPage,
         // filteredProductsCount,
         products
-    }, 2000);
+    })
+    // }, 2000);
 
 })
 // Get single product details  =>  /api/v1/product/:id

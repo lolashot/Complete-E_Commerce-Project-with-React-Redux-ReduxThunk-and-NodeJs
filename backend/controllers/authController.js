@@ -5,10 +5,17 @@ const ErrorHandler = require('../utils/errorHandler');
 const catchAsyncErrors = require('../middlewares/catchAsyncErrors');
 const sendToken = require('../utils/jwtToken');
 const sendEmail = require('../utils/sendEmail');
+
 const crypto = require('crypto');
+const cloudinary = require('cloudinary');
 
 //Register a user     => /api/v1/register
 exports.registerUser = catchAsyncErrors( async (req, res, next) => {
+    const result = await cloudinary.v2.uploader.upload(req.body.avatar, {
+        folder: 'topklazzicshop',
+        width: 150,
+        crop: "scale"
+    })
     
     const { name, email, password } = req.body;
 
@@ -17,8 +24,10 @@ exports.registerUser = catchAsyncErrors( async (req, res, next) => {
         email,
         password,
         avatar: {
-            public_id: 'avatar/123456',
-            url: 'https://random.imagecdn.app/100/100'
+            //public_id: '/123456',//
+            public_id: result.public_id,
+            url: result.secure_url
+            //url: 'https://random.imagecdn.app/100/100'//
         }
     });
     // const token = user.getJwtToken();
